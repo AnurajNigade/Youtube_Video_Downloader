@@ -6,8 +6,8 @@ try:
     
     yt = YouTube(url)
     
-    print("Title:", yt.title)
-    print("Views:", yt.views)
+    print("Title of youtube video :", yt.title)
+    print("Views on that video :", yt.views)
 
     # Get the highest resolution stream
     yd = yt.streams.get_highest_resolution()
@@ -15,6 +15,6 @@ try:
     # Download the video to the current directory
     yd.download()
     
-    print("Download complete.")
+    print("Download complete successfully.")
 except Exception as e:
     print("An error occurred:", str(e))
